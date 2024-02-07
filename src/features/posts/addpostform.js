@@ -22,6 +22,8 @@ export const AddPostForm = () => {
   }
 
 
+  
+
   return (
     <section>
       <h2>Add a New Post</h2>
