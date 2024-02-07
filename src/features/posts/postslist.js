@@ -15,6 +15,7 @@ export const PostsList = () => {
     </article>
   ))
 
+  
   return (
     <section className="posts-list">
       <h2>Posts</h2>
