@@ -29,6 +29,7 @@ export const EditPostForm = ({ match }) => {
     }
   }
 
+  
   return (
     <section>
       <h2>Edit Post</h2>
