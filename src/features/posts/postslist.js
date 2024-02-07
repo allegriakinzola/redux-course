@@ -14,7 +14,6 @@ export const PostsList = () => {
       </Link>
     </article>
   ))
-
   
   return (
     <section className="posts-list">
