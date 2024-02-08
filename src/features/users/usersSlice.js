@@ -6,7 +6,7 @@ const initialState = [
     { id: '2', name: 'Madison Price' }
   ]
 const usersSlice = createSlice({
-    name : users, 
+    name : "users", 
     initialState, 
     reducers : {
 
