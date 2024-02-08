@@ -8,7 +8,6 @@ export const SinglePostPage = ({ match }) => {
     state.posts.find(post => post.id === postId)
   )
 
-
   if (!post) {
     return (
       <section>
