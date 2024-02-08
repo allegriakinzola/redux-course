@@ -28,6 +28,7 @@ export const EditPostForm = ({ match }) => {
       history.push(`/posts/${postId}`)
     }
   }
+  
 
   
   return (
