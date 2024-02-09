@@ -5,6 +5,7 @@ import { PostHautor } from './postauthor'
 import { TimeAgo } from './timesago'
 import { ReactionButtons } from './reactionboutons'
 import { fetchPosts, selectAllPosts, selectPostById } from './postSlice'
+import { Spinner } from '../../components/Spinner'
 
 const PostExcerpt = ({ post }) => {
   return (
