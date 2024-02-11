@@ -21,6 +21,7 @@ export const UserPage = ({ match }) => {
     </li>
   ))
 
+  
   return (
     <section>
       <h2>{user.name}</h2>
