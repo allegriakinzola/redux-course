@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom/cjs/react-router-dom'
 import { selectPostById } from './postSlice'
 import { Spinner } from '../../components/Spinner'
 import { useGetPostsQuery } from '../api/apiSlice'
+import { PostHautor } from './postauthor'
+import { TimeAgo } from './timesago'
+import { ReactionButtons } from './reactionboutons'
 export const SinglePostPage = ({ match }) => {
   const { postId } = match.params
 
@@ -17,7 +20,7 @@ export const SinglePostPage = ({ match }) => {
       <article className="post">
         <h2>{post.title}</h2>
         <div>
-          <PostAuthor userId={post.user} />
+          <PostHautor userId={post.user} />
           <TimeAgo timestamp={post.date} />
         </div>
         <p className="post-content">{post.content}</p>
