@@ -34,7 +34,7 @@ export const PostsList = () => {
     isError,
     error
   } = useGetPostsQuery()
-xx
+
   const sortedPosts = useMemo(() => {
     const sortedPosts = posts.slice()
     // Sort posts in descending chronological order
