@@ -10,6 +10,8 @@ export const store = configureStore({
     users : usersSlice,
     notifications : notificationsclice,
     [apiSlice.reducerPath]: apiSlice.reducer
-  }
+  },
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware().concat(apiSlice.middleware)
   
 })
