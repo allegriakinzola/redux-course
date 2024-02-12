@@ -4,7 +4,7 @@ import { formatDistanceToNow, parseISO } from 'date-fns'
 
 import { selectAllUsers } from '../users/usersSlice'
 
-import { selectAllNotifications } from './notificationsSlice'
+import { selectAllNotifications } from './notificationsclice'
 
 export const NotificationsList = () => {
   const notifications = useSelector(selectAllNotifications)
