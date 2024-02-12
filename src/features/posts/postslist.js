@@ -25,6 +25,7 @@ const PostExcerpt = ({ post }) => {
   )
 }
 
+
 export const PostsList = () => {
   const dispatch = useDispatch()
   const posts = useSelector(selectAllPosts)
