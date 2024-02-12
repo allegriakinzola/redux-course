@@ -25,7 +25,7 @@ let PostExcerpt = ({ post }) => {
     </article>
   )
 }
-
+7
 export const PostsList = () => {
   const {
     data: posts = [],
