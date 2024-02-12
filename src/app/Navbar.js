@@ -28,7 +28,9 @@ export const Navbar = () => {
         <div className="navLinks">
             <Link to="/">Posts</Link>
             <Link to="/users">Users</Link>
-            <Link to="/notifications">Notifications</Link>
+            <Link to="/notifications">
+          Notifications {unreadNotificationsBadge}
+        </Link>
           </div>
           <button className="button" onClick={fetchNewNotifications}>
             Refresh Notifications
