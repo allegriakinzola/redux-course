@@ -5,11 +5,11 @@ import { fetchNotifications, allNotificationsRead} from '../features/notificatio
 
 export const Navbar = () => {
   const dispatch = useDispatch()
-
+  const numUnreadNotifications = null
   const fetchNewNotifications = () => {
     dispatch(fetchNotifications())
     const notifications = useSelector(selectAllNotifications)
-    const numUnreadNotifications = notifications.filter(n => !n.read).length
+    numUnreadNotifications = notifications.filter(n => !n.read).length
   }
   let unreadNotificationsBadge
 
