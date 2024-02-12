@@ -34,7 +34,7 @@ export const PostsList = () => {
     isError,
     error
   } = useGetPostsQuery()
-
+uie
 
   const sortedPosts = useMemo(() => {
     const sortedPosts = posts.slice()
