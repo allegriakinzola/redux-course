@@ -10,23 +10,26 @@ export const AddPostForm = () => {
   const [content, setContent] = useState('')
   const [userId, setUserId] = useState('')
 
-  const dispatch = useDispatch()
-
   const users = useSelector(state => state.users)
 
   const onTitleChanged = e => setTitle(e.target.value)
   const onContentChanged = e => setContent(e.target.value)
   const onAuthorChanged = e => setUserId(e.target.value)
 
-  const onSavePostClicked = () => {
-    if (title && content) {
-      dispatch(postAdded(title, content, userId))
-      setTitle('')
-      setContent('')
+  const canSave = [title, content, userId].every(Boolean) && !isLoading
+
+  const onSavePostClicked = async () => {
+    if (canSave) {
+      try {
+        await addNewPost({ title, content, user: userId }).unwrap()
+        setTitle('')
+        setContent('')
+        setUserId('')
+      } catch (err) {
+        console.error('Failed to save the post: ', err)
+      }
     }
   }
-
-  const canSave = Boolean(title) && Boolean(content) && Boolean(userId)
 
   const usersOptions = users.map(user => (
     <option key={user.id} value={user.id}>
