@@ -25,7 +25,7 @@ let PostExcerpt = ({ post }) => {
     </article>
   )
 }
-ss
+
 export const PostsList = () => {
   const {
     data: posts = [],
