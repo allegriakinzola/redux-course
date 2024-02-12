@@ -42,7 +42,6 @@ export const PostsList = () => {
     return sortedPosts
   }, [posts])
 
-ss
   let content
 
   if (isLoading) {
