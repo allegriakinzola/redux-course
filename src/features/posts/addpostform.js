@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useAddNewPostMutation } from '../api/apiSlice'
 
 import { postAdded } from './postSlice'
 
 export const AddPostForm = () => {
+  const [addNewPost, { isLoading }] = useAddNewPostMutation()
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
   const [userId, setUserId] = useState('')
