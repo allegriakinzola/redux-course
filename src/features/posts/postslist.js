@@ -25,7 +25,7 @@ let PostExcerpt = ({ post }) => {
     </article>
   )
 }
-7
+
 export const PostsList = () => {
   const {
     data: posts = [],
@@ -34,6 +34,8 @@ export const PostsList = () => {
     isError,
     error
   } = useGetPostsQuery()
+
+  jd
 
   const sortedPosts = useMemo(() => {
     const sortedPosts = posts.slice()
