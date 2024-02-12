@@ -7,6 +7,7 @@ import { ReactionButtons } from './reactionboutons'
 import { fetchPosts, selectAllPosts, selectPostById } from './postSlice'
 import { Spinner } from '../../components/Spinner'
 import { useGetPostsQuery } from '../api/apiSlice'
+import classNames from 'classnames'
 
 let PostExcerpt = ({ post }) => {
   return (
@@ -32,7 +33,8 @@ export const PostsList = () => {
     isLoading,
     isSuccess,
     isError,
-    error
+    error,
+    refetch
   } = useGetPostsQuery()
 
   const sortedPosts = useMemo(() => {
@@ -47,7 +49,15 @@ export const PostsList = () => {
   if (isLoading) {
     content = <Spinner text="Loading..." />
   } else if (isSuccess) {
-    content = sortedPosts.map(post => <PostExcerpt key={post.id} post={post} />)
+    const renderedPosts = sortedPosts.map(post => (
+      <PostExcerpt key={post.id} post={post} />
+    ))
+
+    const containerClassname = classNames('posts-container', {
+      disabled: isFetching
+    })
+
+    content = <div className={containerClassname}>{renderedPosts}</div>
   } else if (isError) {
     content = <div>{error.toString()}</div>
   }
