@@ -57,6 +57,7 @@ export const PostsList = () => {
       disabled: isFetching
     })
 
+    
     content = <div className={containerClassname}>{renderedPosts}</div>
   } else if (isError) {
     content = <div>{error.toString()}</div>
