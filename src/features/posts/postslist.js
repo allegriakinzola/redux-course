@@ -45,6 +45,7 @@ export const PostsList = () => {
   }, [posts])
 
   let content
+  
 
   if (isLoading) {
     content = <Spinner text="Loading..." />
@@ -56,6 +57,8 @@ export const PostsList = () => {
     const containerClassname = classNames('posts-container', {
       disabled: isFetching
     })
+
+
 
     
     content = <div className={containerClassname}>{renderedPosts}</div>
